@@ -50,3 +50,23 @@ const myObject = {
   myObject.arrowExample()
 
 
+  //How to Use Functions as Constructors
+  function RegularFuncBird(name, color) {
+    this.name = name
+    this.species = color
+    console.log(this)
+  } 
+//   const ArrowFuncBird = (name, color) => {
+//     this.name = name
+//     this.color = color
+//     console.log(this)
+//   } 
+  new RegularFuncBird("Parrot", "blue") 
+//   new ArrowFuncBird("Parrot", "blue")
+
+//For arrow functions, you cannot use them as constructors. 
+//This is because the value of this in arrow functions is lexically scoped – that is, determined by the surrounding execution context. 
+//This behaviour does not make them suitable to be used as constructors.
+
+
+
