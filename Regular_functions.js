@@ -5,3 +5,12 @@ const name = 'Angel';
 function sayHello(name) {
     return 'Hello ' + name
   }
+
+//arrow functions
+const sayHello = (name) => {
+    return 'Hello ' + name
+  }
+
+  //or
+  const sayHello = (name) => 'Hello ' + name
+  const sayHello = name => 'Hello ' + name
