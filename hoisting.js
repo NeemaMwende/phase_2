@@ -34,7 +34,19 @@ function myRegularFunction() {
   
   myArrowFunction()
 
-
-
+//When invoking or calling a method on an object
+//While the method with the regular function logs the object to the console, the one with the arrow function logs the global window object instead.
+const myObject = {
+    regularExample: function() {
+      console.log("REGULAR: ", this)
+    },
+      
+    arrowExample: () => {
+      console.log("ARROW: ", this)
+    }
+  }
+      
+  myObject.regularExample()
+  myObject.arrowExample()
 
 
