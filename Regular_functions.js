@@ -29,4 +29,18 @@ function logNumbers(num1, num2) {
   
   logNumbers(8, 24, 34, 89, 45)
 
-  
+
+
+  //duplicate parameters in regular functions
+//   "use scrict"
+  function exampleFunction(a, b, a) {
+    console.log(a, b)
+  }
+  exampleFunction("first", "second", "third");
+
+//in arrow functions = running the above brings an error = no duplicates here
+// const exampleFunction = (a, b) => {
+//     console.log(a, b)
+//   }
+//   exampleFunction("first", "second");
+
