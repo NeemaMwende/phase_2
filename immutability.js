@@ -45,15 +45,34 @@ ages.pop(22);
 ages.pop();
 console.log(ages);
 
+//embracing immutability
+//By using the spread operator, we achieve immutability.
+let years = [42, 22, 35];
+years = [...years, 8];  
+console.log(years);
 
+//In addition to the spread operator, many of the array methods also create a new array and therefore treat an array as immutable. 
+//Map creates a new array from the existing array, mapping each element using a function we provide.
+ages.map(x => x + 1);
+//a map function 
+// Example array
+const numbers = [1, 2, 3, 4, 5];
 
+// Using map to square each number
+// const squaredNumbers = numbers.map(function(number) {
+//   return number * number;
+// });
+// console.log(squaredNumbers);
+// Output: [1, 4, 9, 16, 25]
 
+//the same with arrow functions
+// const numbers = [1, 2, 3, 4, 5];
 
+// Using arrow function for brevity
+const squaredNumbers = numbers.map(number => number * number);
 
-
-
-
-
+console.log(squaredNumbers);
+// Output: [1, 4, 9, 16, 25]
 
 
 
