@@ -143,8 +143,8 @@ const slicedFruitsNegative = fruits.slice(-3, -1);
 console.log(slicedFruitsNegative);
 // Output: ['orange', 'kiwi']
 
-
-
+//Splice changes the contents of an array in place, adding, removing, or replacing existing elements. 
+ages.splice(2, 1, 18);
 
 
 
