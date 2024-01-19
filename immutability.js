@@ -74,9 +74,31 @@ const squaredNumbers = numbers.map(number => number * number);
 console.log(squaredNumbers);
 // Output: [1, 4, 9, 16, 25]
 
+// Example array of strings
+const fruits = ['apple', 'banana', 'orange', 'kiwi'];
 
+// Using map to convert each string to uppercase
+const uppercasedFruits = fruits.map(function(fruit) {
+  return fruit.toUpperCase();
+});
 
+console.log(uppercasedFruits);
+// Output: ['APPLE', 'BANANA', 'ORANGE', 'KIWI']
 
+//3.Push modifies the original array in place, mutating the array.
+ages.push(8);
+//Filter creates a new array with items matching the defined criteria. It leaves the original array unchanged.
+ages.filter(x => x > 21);
+// Example array of numbers
+const numberss = [1, 2, 3, 4, 5, 6, 7, 8, 9, 10];
+
+// Using filter to get only the odd numbers
+const oddNumbers = numberss.filter(function(number) {
+  return number % 2 !== 0;
+});
+
+console.log(oddNumbers);
+// Output: [1, 3, 5, 7, 9]
 
 
 
