@@ -99,13 +99,49 @@ const oddNumbers = numberss.filter(function(number) {
 
 console.log(oddNumbers);
 // Output: [1, 3, 5, 7, 9]
+// 4. Sort sorts the array elements in place, thereby mutating the array.
+ages.sort();
+// Example array of numbers
+const numberrs = [3, 1, 4, 1, 5, 9, 2, 6, 5, 3, 5];
 
+// Using sort to arrange numbers in ascending order
+const sortedNumbers = numberrs.sort(function(a, b) {
+  return a - b;
+});
 
+console.log(sortedNumbers);
+// Output: [1, 1, 2, 3, 3, 4, 5, 5, 5, 6, 9]
 
+// Using sort to arrange numbers in descending order
+const sortedNumbersDescendingg = numbers.sort(function(a, b) {
+    return b - a;
+  });
+  
+  console.log(sortedNumbersDescending);
+  // Output: [9, 6, 5, 5, 5, 4, 3, 3, 2, 1, 1]
+  // or
+// Using arrow function for brevity
+const sorteddNumbers = numbers.sort((a, b) => a - b);
+const sortedNumbersDescending = numbers.sort((a, b) => b - a);
 
+//Slice creates a new array from a portion of an existing array. Here we copy the original array elements starting at index 1 through index 3 to a new array.
+ages.slice(1, 3);
 
+// 5 slice function
+// Example array
+const fruitss = ['apple', 'banana', 'orange', 'kiwi', 'mango'];
 
+// Using slice to create a new array with a portion of the original array
+const slicedFruits = fruitss.slice(1, 4);
 
+console.log(slicedFruits);
+// Output: ['banana', 'orange', 'kiwi']
+//or 
+// Using negative indices with slice
+const slicedFruitsNegative = fruits.slice(-3, -1);
+
+console.log(slicedFruitsNegative);
+// Output: ['orange', 'kiwi']
 
 
 
