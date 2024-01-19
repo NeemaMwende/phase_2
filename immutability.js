@@ -31,15 +31,19 @@
 
 // //"primitives" refer to the most basic data types that are not composed of other data types.
 // // These data types are fundamental building blocks used to represent simple values. 
-
+// primitives are immutable and can only be changed through appending texts (concatenation +=)
 let greet = "Hello";
 greet += ", World";  
 console.log(greet);
 
-
-
-
-
+//JavaScript Arrays are Mutable(can be changed)
+// A variable doesn't store an array – it stores the memory address of the array.
+let ages = [42, 22, 35];
+ages.push(8);  
+console.log(ages);
+ages.pop(22);
+ages.pop();
+console.log(ages);
 
 
 
