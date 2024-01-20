@@ -31,8 +31,11 @@ const childFromParent = document.querySelector('#child')
   element.classList.add('styledClass');
 //another example
 
-
-
+//The innerHTML property reads and parses HTML markup that you pass to it. 
+//This means it can read and run code in a script tag passed to it. 
+//Where possible, use the innerText or textContent property to render strings. 
+//But if you need to use innerHTML, be sure you're using it to insert content from trusted sources.
+// Or sanitize and validate the provided content with a library like DOMPurify.
 
 
 
