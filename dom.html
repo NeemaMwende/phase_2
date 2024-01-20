@@ -118,31 +118,59 @@
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>innerHTML Example</title>
+  <title>innerText Example</title>
 </head>
 <body>
 
   <div id="exampleDiv">
-    <p>This is some initial content.</p>
+    <p>This is some <strong>strong</strong> and <em>emphasized</em> text.</p>
   </div>
 
-  <button onclick="changeContent()">Change Content</button>
+  <button onclick="changeText()">Change Text</button>
 
   <script>
-    function changeContent() {
+    function changeText() {
       // Get the element by its ID
       const divElement = document.getElementById('exampleDiv');
 
-      // Update the HTML content
-      divElement.innerHTML = '<p>New content added dynamically!</p>';
+      // Update the text content
+      divElement.innerText = 'New text added dynamically!';
     }
   </script>
 
 </body>
 </html>
 
+<!-- textcontent example -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>textContent Example</title>
+</head>
+<body>
 
+  <div id="exampleDiv">
+    <p>This is some <strong>strong</strong> and <em>emphasized</em> text.</p>
+  </div>
 
+  <button onclick="changeText()">Change Text</button>
+
+  <script>
+    function changeText() {
+      // Get the element by its ID
+      const divElement = document.getElementById('exampleDiv');
+
+      // Update the text content
+      divElement.textContent = 'New text added dynamically!';
+    }
+  </script>
+
+</body>
+</html>
+<!-- The textContent property is often preferred when you want to get or set the text content without worrying about styling or visibility. 
+It provides a way to access the raw text content of an element, including any hidden text. -->
 
 
 

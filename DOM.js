@@ -37,9 +37,11 @@ const childFromParent = document.querySelector('#child')
 //But if you need to use innerHTML, be sure you're using it to insert content from trusted sources.
 // Or sanitize and validate the provided content with a library like DOMPurify.
 
+//innerHTML property, it reads both the HTML markup and the text content of the element. 
+//This means when you use it to set the content of elements, you can include HTML tags, and the browser will render them correctly.
 
-
-
+//The textContent property also ignores all HTML tags and returns only the text. Whiles innerText reads text as it is rendered on screen, 
+//textContent reads text as it is in the markup. 
 
 
 
