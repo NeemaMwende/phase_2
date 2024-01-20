@@ -144,16 +144,51 @@ function handleClick(event) {
   alert(event.target.id) 
 }
 
+//Batch DOM Updates With Fragment
+//A useful feature you can use to batch updates is the .createDocumentFragment property. It allows you to group multiple updates before inserting them into the document. This reduces reflows and makes your code more effecient.
+//Example without Fragment:
 
+const container = document.getElementById('container')
+for (let i = 0; i < 1000; i++) { 
+    const listItem = document.createElement('li')
+    listItem.textContent = `Item ${i}`
+    container.appendChild(listItem) 
+}
+//updates the loop 1000 times which is tiresome
+//Example with fragment:
 
+const containerr = document.getElementById('container') 
+const fragment = document.createDocumentFragment()
 
+// Add multiple list items to the fragment 
+for (let i = 0; i < 1000; i++) { 
+    const listItem = document.createElement('li') 
+    listItem.textContent = `Item ${i}` 
+    fragment.appendChild(listItem)
+} 
+containerr.appendChild(fragment)
 
+// By default, when an event occurs on an element, it bubbles (propagates) through its ancestors.
+//The stopPropagation method provides a way to stop the event from propagating to the parent and other ancestors.
+<div id="container">
+    <button id="button">Click me</button>
+</div>
+const containerDiv = document.getElementById('container')
+const buttonElement = document.getElementById('button')
 
+containerDiv.addEventListener('click', handleDivClick)
+buttonElement.addEventListener('click', handleBtnClick)
 
+function handleDivClick() { 
+    console.log('Div clicked')
+} 
 
-
-
-
+function handleBtnClick(event) { 
+    event.stopPropagation()
+    console.log('Button clicked')
+} 
+//Without using the stopPropagation method, a click event on the button will also trigger a click event on the parent div. This means both event handlers will run.
+//But the event.stopPropagation() line in the code will prevent the handleDivClick function from running when a user clicks the button.
 
 
 
