@@ -111,8 +111,35 @@
 </body>
 </html>
 
+<!-- innerText = This property focuses on the rendered text content.  -->
+<!-- Modifying the innerText of an element means the browser may need to adjust the layout to accommodate the changes in text size, which can have performance implications. -->
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>innerHTML Example</title>
+</head>
+<body>
 
+  <div id="exampleDiv">
+    <p>This is some initial content.</p>
+  </div>
 
+  <button onclick="changeContent()">Change Content</button>
+
+  <script>
+    function changeContent() {
+      // Get the element by its ID
+      const divElement = document.getElementById('exampleDiv');
+
+      // Update the HTML content
+      divElement.innerHTML = '<p>New content added dynamically!</p>';
+    }
+  </script>
+
+</body>
+</html>
 
 
 
