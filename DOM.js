@@ -43,14 +43,27 @@ const childFromParent = document.querySelector('#child')
 //The textContent property also ignores all HTML tags and returns only the text. Whiles innerText reads text as it is rendered on screen, 
 //textContent reads text as it is in the markup. 
 
+<nav>
+  <a>Home</a>
+  <a>About</a>
+  <a>Contact</a>
+  <a style="display: none">Pricing</a>
+</nav>
 
+// Reading content with innerHTML
+const navElement = document.querySelector('nav')
+console.log(navElement.innerHTML)
+//displays everything as it is including the tags
 
+// Reading content with innerText
+const navElementt = document.querySelector('nav')
+console.log(navElementt.innerText)
+//displays the nav contents without the tags and ignores the hidden element
 
-
-
-
-
-
+// Reading content with textContent
+const navElemennt = document.querySelector('nav')
+console.log(navElemennt.textContent)
+//returns all the elements without any styling including the hidden element
 
 
 
