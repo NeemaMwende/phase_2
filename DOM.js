@@ -109,14 +109,40 @@ let userComment = `<img src="malicious-script.jpg" onerror="alert('Malicious Scr
 
 commentSection.innerHTML = userComment;
 
+//Write Readable Event Listeners
+//The first is the event you're listening to and the second is the event handler (the function that fires when the event occurs).
+//Example 1
+MyElement.addEventListener('click', handleClick) 
 
+function handleClick() { 
+    // your logic goes here.. 
+} 
 
+// Example 2 ❌ 
 
+myElement.addEventListener('click', function() { 
+    // your logic goes here... 
+})
 
+//Event delegation is when you attach an event listener on a parent element to listen to events on its descendants.
+// With this technique, you can reduce the number of event listeners to include in your code.
+{/* <div id="parent"> 
+    <button id="btn-1">1st Button</button> 
+    <button id="btn-2">2nd Button</button> 
+    <button id="btn-3">3rd Button</button> 
+    <button id="btn-4">4th Button</button> 
+    <button id="btn-5">5th Button</button> 
+</div> */}
 
+//You can add an event listener to each of the five buttons to listen to a click. Or using event delegation, you can a single event on only the parent div:
 
+const parentElementt = document.getElementById('parent') 
 
+parentElement.addEventListener('click', handleClick) 
 
+function handleClick(event) { 
+  alert(event.target.id) 
+}
 
 
 
