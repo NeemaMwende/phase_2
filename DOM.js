@@ -190,7 +190,12 @@ function handleBtnClick(event) {
 //Without using the stopPropagation method, a click event on the button will also trigger a click event on the parent div. This means both event handlers will run.
 //But the event.stopPropagation() line in the code will prevent the handleDivClick function from running when a user clicks the button.
 
+//The following example uses the Jest framework to test DOM Manipulation code for adding a class to an element.
 
+test('Adding a highlight class changes text color to red', () => {
+    myElement.classList.add('highlight');
+    expect(getComputedStyle(myElement).color).toBe('red');
+});
 
 
 
