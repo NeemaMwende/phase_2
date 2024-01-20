@@ -23,10 +23,13 @@ const childFromDocument = document.getElementById('child')
 // Options 2: Query the parent element ✅
 const childFromParent = document.querySelector('#child')
 
-
-
-
-
+//Use CSS Classes to Style Elements
+//The classList property has useful properties like add, remove, toggle, and others that makes it easy to modify styles.
+// .styledClass {
+//     color: red;
+//   }
+  element.classList.add('styledClass');
+//another example
 
 
 

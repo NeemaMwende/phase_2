@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>classList Example</title>
+  <style>
+    .highlight {
+      color: red;
+      font-weight: bold;
+    }
+  </style>
+</head>
+<body>
+
+  <p id="exampleParagraph">This is a paragraph.</p>
+
+  <script>
+    // Get the element by its ID
+    const paragraph = document.getElementById('exampleParagraph');
+
+    // Add a class to the element
+    paragraph.classList.add('highlight');
+
+    // Check if the class is present
+    const hasHighlightClass = paragraph.classList.contains('highlight');
+    console.log(`Does the element have the 'highlight' class? ${hasHighlightClass}`);
+
+    // Remove the class after a delay
+    setTimeout(() => {
+      paragraph.classList.remove('highlight');
+      console.log("Class 'highlight' removed after delay.");
+    }, 2000);
+
+    // Toggle the class after another delay
+    setTimeout(() => {
+      paragraph.classList.toggle('highlight');
+      console.log("Class 'highlight' toggled after another delay.");
+    }, 4000);
+  </script>
+
+</body>
+</html>
