@@ -65,20 +65,49 @@ const navElemennt = document.querySelector('nav')
 console.log(navElemennt.textContent)
 //returns all the elements without any styling including the hidden element
 
+//Setting content with innerHTML
+h2>Programming languages </h2>
+<ul class="languages-list"></ul>
+const langListElement = document.querySelector('.languages-list')
+
+// Setting or updating content with innerHTML
+langListElement.innerHTML = `
+  <li>JavaScript</li>
+  <li>Python</li>
+  <li>PHP</li>
+  <li>Ruby</li>
+`
+//setting content with innerText
+const langListElement = document.querySelector('.languages-list')
+
+langListElement.innerText = `
+  <li>JavaScript</li>
+  <li>Python</li>
+  <li>PHP</li>
+  <li>Ruby</li>
+`
+//innerText ignores the html tags and prints them as they are on the screen recognizing its stylngs and whitespaces
+
+//setting content with textContext
+const langListElement = document.querySelector('.languages-list')
+
+langListElement.textContent = `
+  <li>JavaScript</li>
+  <li>Python</li>
+  <li>PHP</li>
+  <li>Ruby</li>
+`
+//ignores the tags and prints everything = all text is in a single line because styling is ignored and all formatting = raw text
 
 
+//The browser will run any JavaScript code you put in the HTML script tag. And it can open doors to Cross-Site Scripting (XSS)
+// where attackers can inject and run malicious script in the context of your web page.
+<div id="commentSection"></div>
+const commentSection = document.getElementById('commentSection')
 
+let userComment = `<img src="malicious-script.jpg" onerror="alert('Malicious Script Executed!')"> This is my comment!`;
 
-
-
-
-
-
-
-
-
-
-
+commentSection.innerHTML = userComment;
 
 
 
