@@ -57,12 +57,16 @@ allBtns.forEach(btn => console.log(btn))
 //But you still cannot apply array methods like map, filter, and others on a NodeList. You will need to first create an array from it.
 
 
-
-
-
-
-
-
+//How to Change the Content of DOM Elements
+//1.The innerHTML Property
+{/* <p id="topic">JS array methods</p>
+<p id="first-method">map</p>
+<p id="second-method">filter</p> */}
+const topicElement = document.querySelector('#topic')
+console.log(topicElement.innerHTML)
+const topicElementt = document.querySelector('#topic')
+topicElementt.innerHTML = "JavaScript array methods"
+topicElement.innerHTML = "<b>JavaScript</b> array methods"
 
 
 
