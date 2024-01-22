@@ -24,23 +24,37 @@ const famContacts = document.getElementsByClassName("family")
 console.log(famContacts)
 console.log(famContacts[0]) 
 //This will get the first element in the HTML collection, which is the paragraph with the name Marie.
+//A simple way to create an array from the HTML collection is to use the spread operator, like this:
+let famContactsArray = [...famContacts]
+famContactsArray.forEach(element => console.log(element))
+//The browser will throw an error if you try to apply an array method like map to the HTML collection without first creating an array from it.
+//3. getElementsByTagName
+getElementByTagName('p') 
+const allContacts = document.getElementsByTagName('p')
+console.log(allContacts)
+//You can create an array from the HTML collection and use any of the array methods on it.
+let allContactsArray = [...allContacts]
+allContactsArray.map(element => console.log(element))
 
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+//querySelector = The querySelector method works like how CSS selectors work.
+const firstWorkContact = document.querySelector('.work')
+console.log(firstWorkContact)
+//The example above returns only the first element with a class of work and ignores the rest.
+//<div>
+{/* <button>First button</button>
+<button>Second button</button>
+<button>Third button</button>
+<button>Fourth button</button>
+</div> */}
+const thirdBtn = document.querySelector('div button:nth-child(3)')
+console.log(thirdBtn)
+//But what if you want to select all four button elements and not only the first one? Then you could use the querySelectorAll method instead.
+const allBtns = document.querySelectorAll('button')
+console.log(allBtns)
+//Note: querySelectorAll returns a NodeList. A NodeList is slightly different from an HTML collection. You don't need to convert it to an array to apply a method like forEach on it.
+allBtns.forEach(btn => console.log(btn))
+//But you still cannot apply array methods like map, filter, and others on a NodeList. You will need to first create an array from it.
 
 
 
