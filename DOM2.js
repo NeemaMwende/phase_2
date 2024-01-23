@@ -167,17 +167,34 @@ console.log(jollofParagraph.classList)
 //Elements are a specific type of node, but not all nodes are elements. Other types of content like attributes of elements, text content, and comments within the code are nodes too. But they are not elements.
 //An element is a specific type of node that defines the structure of the document's content. Think of elements as the familiar HTML tags you use. Examples include <div>, <p>, and <ul>. Each element can consist of attributes, text content, and other nested elements.
 
+//Selecting a Parent with parentNode vs parentElement
+{/* <div class="container">
+    <p class="full-text">
+        <i id="italics">Some italicized text</i>
+    </p>
+  </div> */}
+const italicizedText = document.getElementById('italics')
+console.log(italicizedText.parentNode)
+console.log(italicizedText.parentNode.parentNode) // to get the parent of the parent
 
-
-
-
-
-
-
-
-
-
-
+//Selecting Elements with childNodes vs children
+//childNodes: returns a NodeList of all the child nodes within the selected elements. It will include elements and non-element nodes like text nodes, comment nodes, and so on.
+//.children: returns an HTML collection of only the child elements (element nodes) of the selected objects. It will not include any non-element nodes like texts or comments.
+//example
+{/* <div id="container">
+    A text node
+    <p>Some paragraph</p>
+    <!-- This is a comment -->
+    <span>Span Element</span>
+  </div> */}
+//The code above has only 2 child elements (element nodes): the paragraph and the span. But there are other elements too – a text node and a comment:
+const container = document.getElementById('container');
+const containerChildNodes = container.childNodes;
+const containerChildren = container.children;
+console.log(containerChildNodes);
+console.log(containerChildren);
+//The  childNodes will return all the child nodes (both elements and non-elements). It also includes the whitespaces between elements as text nodes.
+//The children will only return the child elements (the paragraph and the span).
 
 
 
