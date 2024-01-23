@@ -69,18 +69,30 @@ topicElementt.innerHTML = "JavaScript array methods"
 topicElement.innerHTML = "<b>JavaScript</b> array methods"
 
 
+//How to Work with Attributes of DOM Elements
+//attribute is made up of a name and a value (though there are exceptions where only a name is present).
+//The getAttribute Method = Like the name suggests, you can use this method to get the value of an existing attribute on an element.
+{/* <img src="image.jpg" alt="An example image"> */}
+const imageElementt = document.querySelector('img')
+console.log(imageElementt.getAttribute('src'))
 
+//The setAttribute Method = This is used to set or change the attribute of an element. 
+{/* <img src="image.jpg" alt="An example image"> */}
+const imageElement = document.querySelector('img')
+console.log("BEFORE:", imageElement.getAttribute('src'))
+imageElement.setAttribute('src', 'new-image.jpg')
+console.log("AFTER:", imageElement.getAttribute('src'))
 
+const imageElemennt = document.querySelector('img')
+console.log("BEFORE:", imageElemennt.getAttribute('height'))
+imageElement.setAttribute('height', '200')
+console.log("AFTER:", imageElement.getAttribute('height'))
 
-
-
-
-
-
-
-
-
-
+//The removeAttribute Method
+const imageEllement = document.querySelector('img')
+console.log("BEFORE:", imageEllement.getAttribute('height')) // gets the height 200
+imageElement.removeAttribute('height', '200')
+console.log("AFTER:", imageEllement.getAttribute('height')) // returns null
 
 
 
