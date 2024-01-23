@@ -162,10 +162,10 @@ console.log(jollofParagraph.classList)
 // The second time the toggle runs, favorite doesn't exist so the toggle adds favorite to the class list.
 // The next time the toggle runs, favorite now exists again. So it removes it from the class list.
 
-
-
-
-
+//How to Traverse the DOM = to move between the different elements/nodes within the HTML document. 
+//Nodes are the building blocks of the DOM. They represents different components in the HTML structure.
+//Elements are a specific type of node, but not all nodes are elements. Other types of content like attributes of elements, text content, and comments within the code are nodes too. But they are not elements.
+//An element is a specific type of node that defines the structure of the document's content. Think of elements as the familiar HTML tags you use. Examples include <div>, <p>, and <ul>. Each element can consist of attributes, text content, and other nested elements.
 
 
 
