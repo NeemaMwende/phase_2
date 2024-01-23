@@ -196,13 +196,26 @@ console.log(containerChildren);
 //The  childNodes will return all the child nodes (both elements and non-elements). It also includes the whitespaces between elements as text nodes.
 //The children will only return the child elements (the paragraph and the span).
 
+//Selecting the First or Last Child/Element
+//firstChild: Selects only the first child node of the parent element.
+// lastChild: Selects only the last child node of the parent element.
+// firstElementChild: Selects only the first child element of the parent.
+// lastElementChild: Selects only the last child element of the parent.
 
-
-
-
-
-
-
+//example
+{/* <div id="container">
+A text node
+<p>Some paragraph</p>
+<!-- This is a comment -->
+<span>Span Element</span>
+</div> */}
+const containerr = document.getElementById('container');
+console.log("FIRST CHILD:", containerr.firstChild)
+console.log("LAST CHILD:", containerr.lastChild)
+console.log("FIRST ELEMENT: ", containerr.firstElementChild)
+console.log("LAST ELEMENT:", containerr.lastElementChild)
+//Note how firstChild returns the first text node but the firstElementChild returns the first paragraph instead. This means it ignored the text node which comes before the paragraph.
+//And also note how the lastChild returns a text node – even though from the markup, it looks like there's nothing after the span. That is because the lastChild property considers the linebreak/whitespace between the closing tag of the span and the closing tag of the div elements as a node.
 
 
 
