@@ -94,6 +94,125 @@ console.log("BEFORE:", imageEllement.getAttribute('height')) // gets the height 
 imageElement.removeAttribute('height', '200')
 console.log("AFTER:", imageEllement.getAttribute('height')) // returns null
 
+//The hasAttribute Method
+const imageEleement = document.querySelector('img')
+console.log("HEIGHT", imageEleement.hasAttribute('height')) //returns true
+console.log("WIDTH", imageEleement.hasAttribute('width')) //false
+
+//How to Change the Styles on DOM Elements
+//You can use the .style property or you can use classes.
+//The .style property allows you to set styles directly as inline styles for elements. This means it overrides the styles you have in your CSS stylesheet.
+{/* <h1>Styling elements with JavaScript</h1> */}
+const header = document.querySelector('h1')
+console.log(header.style) // The console.log prints the CSS style declarations with all the CSS properties for that element.
+
+//example one
+//<h1>I love JavaScript</h1>
+const paragraph = document.querySelector('h1')
+paragraph.style.color = 'white'
+paragraph.style.backgroundColor = 'green' // background-color becomes backgroundColor.
+//You can also delete a style on an element by setting the value of the property to an empty string.
+element.style.propertyName = ""
+
+
+//Setting Styles with Classes
+//With classes, you can create styles once and apply it to different elements. This helps make your code become more maintainable.
+{/* <p class="food rice-dish">Jollof rice</p> */}
+const jollofParagraph = document.querySelector('p')
+console.log(jollofParagraph.className) //food rice-dish
+jollofParagraph.className = 'favorite'
+console.log(jollofParagraph.className) //favorite
+
+//The classList Property = With the classList property, you can add and remove classes. 
+//You can also toggle classes, replace existing class values with new ones, and even check if the class contains a specific value.
+{/* <p class="food">Jollof rice</p> */}
+const jollofParagraph = document.querySelector('p')
+console.log(jollofParagraph.classList) //Shows the current classList with only one value
+
+//Adding Classes with classList.add()
+jollofParagraph.classList.add('fav', 'tasty')
+console.log(jollofParagraph.classList) //The code adds two new classes fav and tasty to the class list.
+
+//Removing Classes With classList.remove()
+jollofParagraph.classList.remove('tasty')
+console.log(jollofParagraph.classList) //The code removes the class tasty from the class list.
+
+//Replacing Classes with classList.replace()
+jollofParagraph.classList.replace('fav', 'favorite')
+console.log(jollofParagraph.classList) // replaces the fav class with favourite class
+
+//Check the Presence of a Class with classList.contains()
+const isFavorite = jollofParagraph.classList.contains('favorite')
+const isSoup = jollofParagraph.classList.contains('soup')
+console.log("Contains favorite: ", isFavorite) //true
+console.log("Contains soup: ", isSoup) //false
+
+//Toggling a Class with the classList.toggle()
+//When you use the toggle property, it first checks if the class exists. If it exists, it will remove it. And if it doesn't exist, it will add it.
+jollofParagraph.classList.toggle('favorite')
+console.log(jollofParagraph.classList)
+
+jollofParagraph.classList.toggle('favorite')
+console.log(jollofParagraph.classList)
+
+jollofParagraph.classList.toggle('favorite')
+console.log(jollofParagraph.classList)
+
+// The first time the toggle runs, favorite exists in the class list. So, the toggle removes it.
+// The second time the toggle runs, favorite doesn't exist so the toggle adds favorite to the class list.
+// The next time the toggle runs, favorite now exists again. So it removes it from the class list.
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
