@@ -217,10 +217,25 @@ console.log("LAST ELEMENT:", containerr.lastElementChild)
 //Note how firstChild returns the first text node but the firstElementChild returns the first paragraph instead. This means it ignored the text node which comes before the paragraph.
 //And also note how the lastChild returns a text node – even though from the markup, it looks like there's nothing after the span. That is because the lastChild property considers the linebreak/whitespace between the closing tag of the span and the closing tag of the div elements as a node.
 
+//Selecting a Sibling of Nodes in the DOM
+//nextSibling: Selects the next node within the same parent element.
+// nextElementSibling: Selects the next element, and ignores any non-element nodes.
+// previousSibling: Selects the previous node within the same parent element.
+// previousElementSibling: Selects the previous element, and ignores any non-element nodes.
 
-
-
-
+//<div>
+{/* <p id="one">First paragraph</p>
+text node
+<p id="two">Second paragraph</p>
+another text node
+<p id="three">Third paragraph</p>
+<p id="four">Fourth paragraph</p>
+</div> */}
+const paragraphTwo = document.getElementById('two')
+console.log("nextSibling: ", paragraphTwo.nextSibling)
+console.log("nextElementSibling: ", paragraphTwo.next)
+console.log("previousSibling: ", paragraphTwo.previous)
+console.log("previousElementSibling: ", paragraphTwo.previous)
 
 
 
