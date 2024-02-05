@@ -59,7 +59,11 @@ function watchTutorialPromise(){
         }
     }
 );} 
-    
+watchTutorialPromise().then((message) => {
+    console.log('success: ' + message)
+    }).catch((error) => {
+    console.error(error.name + '' + error.message)
+})
     
 
 
