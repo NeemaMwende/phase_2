@@ -17,6 +17,77 @@ p.then((message) => {
 })
 
 
+const userLeft = false;
+const userWatchingCatMeme = false;
+
+// function watchTutorialCallback(callback, errorCallback){
+//     if (userLeft) {
+//         errorCallback({
+//             name: 'UserLeft',
+//             message: 'The user has left :('
+//         })
+//     } else if (userWatchingCatMeme){
+//         errorCallback({
+//             name: 'User Watching Cat Meme',
+//             message: 'WebDevSimplified < Cat'
+//         })
+//     } else {
+//         callback('Thumbs up and subscribe')
+//     }
+// };
+// watchTutorialCallback((message) => {
+//     console.log('success: ' + message)
+// }, (error) => {
+//     console.error(error.name + '' + error.message)
+// })
+
+
+function watchTutorialPromise(){
+    return new Promise((resolve, reject) => {
+        if (userLeft) {
+            reject({
+                name: 'UserLeft',
+                message: 'The user has left :('
+            })
+        } else if (userWatchingCatMeme){
+            reject({
+                name: 'User Watching Cat Meme',
+                message: 'WebDevSimplified < Cat'
+            })
+        } else {
+            resolve('Thumbs up and subscribe')
+        }
+    }
+);} 
+    
+    
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 
 
