@@ -20,7 +20,7 @@ function outerFunction(outerVariables)
 const newFunction = outerFunction('outside')
 newFunction('inside')
 
-
+//anothr fuction is the fetch function
 
 
 
