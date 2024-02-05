@@ -1,3 +1,5 @@
+//closures, functions inside functions
+
 const myName = 'Angel';
 function printName()
 {
@@ -7,8 +9,16 @@ printName();
 
 
 
-
-
+function outerFunction(outerVariables)
+{
+    return function innerFunction(innerVariables)
+    {
+        console.log('Outer Variables: ' + outerVariables);
+        console.log('Inner Variables: ' + innerVariables);
+    }
+}
+const newFunction = outerFunction('outside')
+newFunction('inside')
 
 
 
